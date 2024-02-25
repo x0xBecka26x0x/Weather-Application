@@ -27,12 +27,12 @@ header {
     border-radius: 8px;
     width: 80%;
     font-size: 16px;
-    padding: 15px 20px;
+    padding: 15px 25px;
 }
 
 .search-button {
     background: #885df1;
-    padding: 15px 30px;
+    padding: 15px 25px;
     border: none;
     font-size: 16px;
     margin-left: 5px;
