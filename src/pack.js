@@ -1,5 +1,8 @@
 function weatherInfo(response) {
-    console.log(response.data.current.temperature);
+    let weatherTemperatureElement = document.querySelector("#weather-temperature");
+    weatherTemperatureElement.innerHTML = response.data.temperature.current;
+    
+    console.log(response.data.temperature.current);
 }
 
 function searchCity(city) {
