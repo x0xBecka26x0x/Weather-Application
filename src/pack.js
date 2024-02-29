@@ -1,10 +1,11 @@
 function weatherInfo(response) {
-    let temperatureElement = document.querySelector("temperature");
+    let temperatureElement = document.querySelector("#temperature");
     let temperature = response.data.temperature.current;
+    let cityElement = document.querySelector("#current-city");
 
-    temperatureElement.innerHTML = Math.round(temperature);
+    cityElement.innerHTML = response.data.city;
+   temperatureElement.innerHTML = Math.round(temperature);
 }
-
 
 function searchCity(city) {
     let apiKey = "bf8f1010b3c486eaa378at4e5eo24f84";
@@ -15,8 +16,6 @@ function searchCity(city) {
 function search(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#search-input");
-    let cityElement = document.querySelector("#current-city");
-    cityElement.innerHTML = searchInput.value;
     
     searchCity(searchInput.value);
 }
